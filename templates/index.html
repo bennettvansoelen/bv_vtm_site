@@ -1,6 +1,11 @@
 {% extends 'base.html' %}
+<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/stylesheet.css') }}">
+{% block title %} Vertical Tank Maintenence Inc.{% endblock %}
 
-{% block title %} Welcome to the home page {% endblock %}
 
-
-{% block body %} Hello world! {% endblock %}
+{% block body %}
+<p>
+    Using our site you can get an estimate of how much it will cost to paint your Vertical Tanks.
+    Just click the "Estimate" tab and enter the dimensions of your tank.
+</p> 
+{% endblock %}

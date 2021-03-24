@@ -1,21 +1,34 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{% block title %} {% endblock%}</title>
     <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/stylesheet.css') }}">
 </head>
+
 <body>
     <div>
-        <h1>Welcome to Software Design</h1>
+        <h1>Vertical Tank Maintenence Inc.</h1>
         <hr>
         <br>
-        
-        {% block body %}
+        <div class="header">
+            <ul>
+                <li class="navbar"> <a href="./">Home</a></li>
+                <li class="navbar"> <a href="./about">About</a> </li>
+                <li class="navbar"> <a href="./price">Estimate</a> </li>
+            </ul>
+        </div>
 
+
+        {% block body %}
+       
         {% endblock %}
 
     </div>
 </body>
+<br></br>
+<footer>&copy VTM Inc. 2021</footer>
+
 </html>
