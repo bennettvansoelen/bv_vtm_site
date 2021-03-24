@@ -9,11 +9,11 @@
 <form action="/calculate" method="POST">
 
     <label for="radius">
-        Enter the radius of your tank: <input type="text" id="radius" name="radius" required autofocus>
+        Enter the radius of your tank in inches: <input type="text" id="radius" name="radius" required autofocus>
     </label>
     <br></br>
     <label for="height">
-        Enter the height of your tank: <input type="text" id="height" name="height" required>
+        Enter the height of your tank in inches: <input type="text" id="height" name="height" required>
     </label>
     <br></br>
 
@@ -22,7 +22,7 @@
 </form>
 
 {% if myValue %}
-<p>The sum of the two numbers is: {{ myValue }}</p>
+<p>Your total cost is: ${{ myValue }}</p>
 {% endif %}
 
 

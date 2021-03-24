@@ -21,9 +21,15 @@ def calculate():
         pi = 3.14
         r = float(request.form['radius'])
         h = float(request.form['height'])
-        topArea = pi * (r**2)
-        print(topArea)
-    return render_template('price.html', myValue= topArea)
+        topArea = pi * (r ** 2)
+        sideArea = 2 * (pi * (r * h))
+        totalArea = topArea + sideArea
+        sqftArea = totalArea/144
+        materialCost = 25 * sqftArea
+        laborCost = 15 * sqftArea
+        totalCost = materialCost + laborCost
+        print(totalCost)
+    return render_template('price.html', myValue= totalCost)
 
 if __name__ == '__main__':
     app.run(debug=True)
