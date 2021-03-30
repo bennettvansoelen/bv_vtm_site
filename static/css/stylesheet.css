@@ -13,6 +13,13 @@ li.navbar{
     border-radius: 4px;
 }
 
+#image{
+    height: auto;
+    width: auto;
+    margin: 20px;
+    display: block;
+}
+
 .navbar a:hover{
     background-color: #ddd;
     color: black;
@@ -34,4 +41,12 @@ div.ipsum{
     border-color: black;
 }
 
+.footer-row{
+    background-color: lightgray;
+    height: 50px;
+}
+footer{
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
 
