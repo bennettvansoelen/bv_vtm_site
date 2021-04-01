@@ -28,6 +28,7 @@ def calculate():
         materialCost = 25 * sqftArea
         laborCost = 15 * sqftArea
         totalCost = materialCost + laborCost
+        totalCost = round(totalCost, 2)
         print(totalCost)
     return render_template('price.html', myValue= totalCost)
 

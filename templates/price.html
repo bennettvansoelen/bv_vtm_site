@@ -3,27 +3,34 @@
 {% block title %} Price Calculator {% endblock %}
 
 {% block body %}
-
-<h2>Price Calculator</h2>
-
-<form action="/calculate" method="POST">
-
-    <label for="radius">
-        Enter the radius of your tank in inches: <input type="text" id="radius" name="radius" required autofocus>
-    </label>
-    <br></br>
-    <label for="height">
-        Enter the height of your tank in inches: <input type="text" id="height" name="height" required>
-    </label>
-    <br></br>
-
-    <button type="submit" class="btn btn-primary" value="calculate">Calculate</button>
-    <br>
-
-</form>
-
+<br>
+<br>
+<div class="container-md">
+    <h2>Price Calculator</h2>
+    <p>Calculate the estimated price for painting a tanker of any size</p>
+    <form action="/calculate" method="POST">
+        <div class="row">
+            <div class="form-group col-sm-4">
+                <label for="radius" class="form-label">Radius of tank in inches:</label>
+                <input type="text" class="form-control" id="radius" name="radius" placeholder="i.e. 10" required
+                    autofocus>
+                <br>
+            </div>
+        </div>
+        <div class="row">
+            <div class="form-group col-sm-4">
+                <label for="height" class="form-label">Height of tank in inches: </label>
+                <input type="text" class="form-control" id="height" name="height" placeholder="i.e. 15" required>
+            </div>
+        </div>
+        <br>
+        <br>
+        <button type="submit" class="btn btn-primary" value="calculate">Calculate</button>
+        <br>
+        <br>
+    </form>
 {% if myValue %}
-<p>Your total cost is: ${{ myValue }}</p>
+<p>Your estimated cost is: ${{ myValue }}</p>
 {% endif %}
-
+</div>
 {% endblock %}
